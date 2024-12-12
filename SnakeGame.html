@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+           <li><a href="SnakeGame.html">Home</a></li>
+           <li><a href="contactUs.html">Contact us</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div id="menu" class="menu">
+         <h1>Snake Game</h1>
+         <button id="startGame">Start Game</button>
+         <button id="exitGame">Exit</button>
+    </div>
+
+    <div id="Difficulty_selection" class="Difficulty_selection">
+        <form id="difficultyForm">
+            <h1>Difficulty selection</h1>
+            <label>
+                <input type="radio" name="difficulty" value="easy" checked>
+                <i class="fas fa-play"></i> Easy
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="medium">
+                <i class="fas fa-play"></i> Medium
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="difficult">
+                <i class="fas fa-play"></i> Difficult
+            </label>
+        </form>
+        <br>
+        <br>
+        <br>
+        <form id="speedForm">
+            <h1>Speed selection</h1>
+            <label>
+                <input type="radio" name="speed" value="slow" checked>
+                <i class="fas fa-play"></i> Slow
+            </label>
+            <label>
+                <input type="radio" name="speed" value="normal">
+                <i class="fas fa-play"></i> Normal
+            </label>
+            <label>
+                <input type="radio" name="speed" value="fast">
+                <i class="fas fa-play"></i> Fast
+            </label>
+        </form>
+        <br>
+        <br>
+        <button id="startSelection">
+            start
+        </button>
+    </div>
+
+
+    <div id="game-container" class="container noselect" style="display: none">
+        <div id="author">
+            <h1>Snake Game</h1>
+        </div>
+        <canvas id="canvas" width="400" height="400" ></canvas>
+        <div id="ui">
+            <h2>SCORE</h2>
+            <br>
+            <span id="score">00</span>
+        </div>
+        <button id="replay">
+            <i class="fas fa-play"></i>
+            RESTART
+        </button>
+        <button id="exit">
+            <i class="fas fa-play"></i>
+            EXIT
+        </button>
+    </div>
+    <footer id="footer">
+        <p>DKC &copy; 2024</p>
+    </footer>
+</body>
+</html>

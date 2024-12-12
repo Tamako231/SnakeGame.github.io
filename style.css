@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-image: url('images/backgroundPicture.jpg'); /* 添加背景图片 */
+    background-size: cover; /* 覆盖整个页面 */
+    background-position: center; /* 图片居中显示 */
+    background-attachment: fixed;
+    background-color: #222738;
+    z-index: 10;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222738;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: block; /* Initially hidden */
+    z-index: 1000;
+}
+
+.menu h1 {
+    color: #4cffd7;
+    font-size: 40px;
+    margin-bottom: 200px;
+}
+
+.menu button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px  0;
+    background: #6e7888;
+    border: none;
+    color: #222738;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%; /* 让按钮宽度占满容器宽度 */
+    box-sizing: border-box; /* 确保边框和内边距不会增加元素的总宽度 */
+}
+
+.menu button:hover {
+    background: #a6aab5;
+}
+
+#startGame {
+    background: #4cffd7;
+}
+
+#exitGame {
+    background: #ff4c4c;
+}
+
+
+.Difficulty_selection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222738;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none; /* Initially hidden */
+    z-index: 500;
+}
+
+.Difficulty_selection h1{
+    color: #4cffd7;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.Difficulty_selection label{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #6e7888;
+    border: none;
+    color: #222738;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.Difficulty_selection label:hover{
+    background: #a6aab5;
+}
+
+.Difficulty_selection button{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #6e7888;
+    border: none;
+    color: #222738;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Difficulty_selection button:hover{
+    background: #a6aab5;
+    background: #4cffd7;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 移除多余换行 */
+.Difficulty_selection form + form,
+.Difficulty_selection button {
+    margin-top: 20px; /* 调整了间距 */
+}
+
+canvas {
+    background-color: #181825;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#ui {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+#score {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 800;
+}
+.noselect {
+    user-select: none;
+}
+#exit,
+#replay {
+    font-size: 15px;
+    padding: 10px 20px;
+    background: #6e7888;
+    border: none;
+    color: #222738;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 20px;
+}
+#exit:hover,
+#replay:hover {
+    background: #a6aab5;
+    background: #4cffd7;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 600px) {
+    #replay {
+        margin-bottom: 20px;
+    }
+    #replay,
+    h2 {
+        transform: rotate(0deg);
+    }
+    #ui {
+        flex-flow: row wrap;
+        margin-bottom: 20px;
+    }
+    #score {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+    .container {
+        flex-flow: column wrap;
+    }
+}
+#author {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+#navbar {
+    background-color: #778899;
+    overflow: hidden;
+    position: fixed; /* 固定在顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 1001; /* 确保在其他内容之上 */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* 使用Flexbox布局 */
+}
+
+#navbar li {
+    float: none; /* 移除float属性 */
+    margin: 0 10px; /* 添加一些边距以分隔选项 */
+}
+
+#navbar li a {
+    display: block;
+    color: #4cffd7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+#footer {
+    background-color: #778899;
+    color: #4cffd7;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* 固定在底部 */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact Us 页面特定样式 */
+#contact-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222738;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* 限制最大宽度 */
+    box-sizing: border-box;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    color: #4cffd7;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #181825;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4cffd7;
+    border: none;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#contact-form button:hover {
+    background: #a6aab5;
+}
